@@ -1,6 +1,6 @@
 {
   "name": "@svgv/webpack",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Webpack loader to transform SVGs into Vue components.",
   "main": "src/index.js",
   "files": [
@@ -10,7 +10,7 @@
     "webpack": "^4.0.0 || ^5.0.0"
   },
   "dependencies": {
-    "@svgv/core": "^0.0.0",
+    "@svgv/core": "^0.1.0",
     "loader-utils": "^2.0.0"
   },
   "devDependencies": {

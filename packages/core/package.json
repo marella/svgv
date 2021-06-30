@@ -1,6 +1,6 @@
 {
   "name": "@svgv/core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Node.js API to transform SVGs into Vue components.",
   "main": "src/index.js",
   "files": [
