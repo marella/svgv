@@ -1,0 +1,32 @@
+{
+  "name": "@svgv/core",
+  "version": "0.0.0",
+  "description": "Node.js API to transform SVGs into Vue components.",
+  "main": "src/index.js",
+  "files": [
+    "src/**/*.js"
+  ],
+  "dependencies": {
+    "svgo": "^2.3.1"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marella/svgv.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/marella/svgv/issues"
+  },
+  "homepage": "https://github.com/marella/svgv/tree/main/packages/core",
+  "keywords": [
+    "svg",
+    "vue"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

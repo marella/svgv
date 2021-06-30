@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loader should allow options: null 1`] = `
+"import { render } from \\"./raw.svg?vue&type=template&id=56df30f5\\"
+const script = {}
+script.render = render
+
+export default script
+
+---
+
+import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \\"vue\\"
+
+const _hoisted_1 = {
+  xmlns: \\"http://www.w3.org/2000/svg\\",
+  viewBox: \\"0 0 100 100\\",
+  width: \\"100px\\",
+  height: \\"100px\\"
+}
+const _hoisted_2 = /*#__PURE__*/_createVNode(\\"circle\\", {
+  cx: \\"50\\",
+  cy: \\"50\\",
+  r: \\"50\\",
+  style: {\\"fill\\":\\"#00f\\"}
+}, null, -1 /* HOISTED */)
+
+export function render(_ctx, _cache) {
+  return (_openBlock(), _createBlock(\\"svg\\", _hoisted_1, [
+    _hoisted_2
+  ]))
+}"
+`;
+
+exports[`loader should allow options: removeViewBox 1`] = `
+"import { render } from \\"./raw.svg?vue&type=template&id=8ffa4cac\\"
+const script = {}
+script.render = render
+
+export default script
+
+---
+
+import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \\"vue\\"
+
+const _hoisted_1 = {
+  xmlns: \\"http://www.w3.org/2000/svg\\",
+  width: \\"100px\\",
+  height: \\"100px\\"
+}
+const _hoisted_2 = /*#__PURE__*/_createVNode(\\"circle\\", {
+  cx: \\"50\\",
+  cy: \\"50\\",
+  r: \\"50\\",
+  style: {\\"fill\\":\\"#00f\\"}
+}, null, -1 /* HOISTED */)
+
+export function render(_ctx, _cache) {
+  return (_openBlock(), _createBlock(\\"svg\\", _hoisted_1, [
+    _hoisted_2
+  ]))
+}"
+`;
+
+exports[`loader should support file-loader: result 1`] = `
+"import { render } from \\"./raw.svg?vue&type=template&id=b5f1ca76\\"
+import script from \\"./raw.svg?vue&type=script&lang=js\\"
+export * from \\"./raw.svg?vue&type=script&lang=js\\"
+script.render = render
+
+export default script
+
+---
+
+import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \\"vue\\"
+
+const _hoisted_1 = {
+  xmlns: \\"http://www.w3.org/2000/svg\\",
+  viewBox: \\"0 0 100 100\\",
+  width: \\"100\\",
+  height: \\"100\\"
+}
+const _hoisted_2 = /*#__PURE__*/_createVNode(\\"circle\\", {
+  cx: \\"50\\",
+  cy: \\"50\\",
+  r: \\"50\\",
+  fill: \\"#00f\\"
+}, null, -1 /* HOISTED */)
+
+export function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_openBlock(), _createBlock(\\"svg\\", _hoisted_1, [
+    _hoisted_2
+  ]))
+}
+
+---
+
+export default new String(__webpack_public_path__ + \\"261ed99e5d6e1bdf643add2822dbbf55.svg\\");"
+`;
+
+exports[`loader should support url-loader: result 1`] = `
+"import { render } from \\"./raw.svg?vue&type=template&id=3bf96b22\\"
+import script from \\"./raw.svg?vue&type=script&lang=js\\"
+export * from \\"./raw.svg?vue&type=script&lang=js\\"
+script.render = render
+
+export default script
+
+---
+
+import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \\"vue\\"
+
+const _hoisted_1 = {
+  xmlns: \\"http://www.w3.org/2000/svg\\",
+  viewBox: \\"0 0 100 100\\",
+  width: \\"100\\",
+  height: \\"100\\"
+}
+const _hoisted_2 = /*#__PURE__*/_createVNode(\\"circle\\", {
+  cx: \\"50\\",
+  cy: \\"50\\",
+  r: \\"50\\",
+  fill: \\"#00f\\"
+}, null, -1 /* HOISTED */)
+
+export function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (_openBlock(), _createBlock(\\"svg\\", _hoisted_1, [
+    _hoisted_2
+  ]))
+}
+
+---
+
+export default new String(\\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiPgogIDxjaXJjbGUgY2xhc3M9ImNpcmNsZSIgY3g9IjUwIiBjeT0iNTAiIHI9IjUwIiAvPgogIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CiAgLmNpcmNsZSB7CiAgICBmaWxsOiBibHVlOwogIH0KICAudW5rbm93biB7CiAgICBmaWxsOiByZWQ7CiAgfQogIDwvc3R5bGU+CiAgPHNjcmlwdD5jb25zb2xlLmVycm9yKCdzdmcnKTs8L3NjcmlwdD4KPC9zdmc+Cg==\\");"
+`;
+
+exports[`loader should transform svg: result 1`] = `
+"import { render } from \\"./raw.svg?vue&type=template&id=ceb116a4\\"
+const script = {}
+script.render = render
+
+export default script
+
+---
+
+import { createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \\"vue\\"
+
+const _hoisted_1 = {
+  xmlns: \\"http://www.w3.org/2000/svg\\",
+  viewBox: \\"0 0 100 100\\",
+  width: \\"100\\",
+  height: \\"100\\"
+}
+const _hoisted_2 = /*#__PURE__*/_createVNode(\\"circle\\", {
+  cx: \\"50\\",
+  cy: \\"50\\",
+  r: \\"50\\",
+  fill: \\"#00f\\"
+}, null, -1 /* HOISTED */)
+
+export function render(_ctx, _cache) {
+  return (_openBlock(), _createBlock(\\"svg\\", _hoisted_1, [
+    _hoisted_2
+  ]))
+}"
+`;

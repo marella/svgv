@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`optimize should allow options: result 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100\\" height=\\"100\\">
+    <circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" fill=\\"#00f\\"/>
+</svg>
+</template>
+"
+`;
+
+exports[`optimize should allow plugins: null 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100px\\" height=\\"100px\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" style=\\"fill:#00f\\"/></svg></template>
+"
+`;
+
+exports[`optimize should allow plugins: removeViewBox 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100px\\" height=\\"100px\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" style=\\"fill:#00f\\"/></svg></template>
+"
+`;
+
+exports[`optimize should not optimize: result 1`] = `
+"<template><?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<!DOCTYPE svg PUBLIC \\"-//W3C//DTD SVG 1.1//EN\\" \\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\\">
+<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100px\\" height=\\"100px\\">
+  <circle class=\\"circle\\" cx=\\"50\\" cy=\\"50\\" r=\\"50\\" />
+  <style type=\\"text/css\\">
+  .circle {
+    fill: blue;
+  }
+  .unknown {
+    fill: red;
+  }
+  </style>
+  <script>console.error('svg');</script>
+</svg>
+</template>
+"
+`;
+
+exports[`transform should transform svg { defaultExport: '"foo"' }: result 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100\\" height=\\"100\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" fill=\\"#00f\\"/></svg></template>
+<script>export default new String(\\"foo\\");</script>
+"
+`;
+
+exports[`transform should transform svg { defaultExport: '' }: result 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100\\" height=\\"100\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" fill=\\"#00f\\"/></svg></template>
+"
+`;
+
+exports[`transform should transform svg { defaultExport: 'foo + "bar"' }: result 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100\\" height=\\"100\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" fill=\\"#00f\\"/></svg></template>
+<script>export default new String(foo + \\"bar\\");</script>
+"
+`;
+
+exports[`transform should transform svg { defaultExport: 'null' }: result 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100\\" height=\\"100\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" fill=\\"#00f\\"/></svg></template>
+"
+`;
+
+exports[`transform should transform svg { defaultExport: 'undefined' }: result 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100\\" height=\\"100\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" fill=\\"#00f\\"/></svg></template>
+"
+`;
+
+exports[`transform should transform svg: result 1`] = `
+"<template><svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 100 100\\" width=\\"100\\" height=\\"100\\"><circle cx=\\"50\\" cy=\\"50\\" r=\\"50\\" fill=\\"#00f\\"/></svg></template>
+"
+`;

@@ -1,0 +1,59 @@
+name: tests
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    name: Webpack ${{ matrix.webpack }} Node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+        node:
+          - 10
+          - 12
+          - 14
+          - 16
+        webpack:
+          - 4
+          - 5
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install latest npm
+        run: npm install npm --global
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install webpack ${{ matrix.webpack }}
+        run: npm install webpack@${{ matrix.webpack }} --no-save
+
+      - name: Run tests
+        run: npm test -- --coverage
+
+      - uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          flag-name: webpack-${{ matrix.webpack }}-node-${{ matrix.node }}-on-${{ matrix.os }}
+          parallel: true
+
+  finish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
