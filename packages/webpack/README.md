@@ -67,6 +67,17 @@ export default {
 </script>
 ```
 
+If you see the "Cannot find module" error at the `import` line of a TypeScript code, then you need to add this file to your project:
+_"svg.d.ts"_
+```typescript
+declare module '*.svg' {
+  import type { SVGAttributes, DefineComponent } from 'vue';
+
+  const content: DefineComponent<SVGAttributes>;
+  export default content;
+}
+```
+
 ### Using with `url-loader` or `file-loader`
 
 > **Note:** This is an experimental feature.
